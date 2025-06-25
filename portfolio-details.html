@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p><strong>Label:</strong> {{ predict }}</p>
+    <p><strong>Confidence:</strong> {{ confidence }}%</p>
+    <img src="/{{ image_path }}" alt="Uploaded Image" width="300">
+    <br><br>
+    <a href="{{ url_for('inspect') }}">Try Another Image</a> |
+    <a href="{{ url_for('index') }}">Home</a>
+</body>
+</html>
